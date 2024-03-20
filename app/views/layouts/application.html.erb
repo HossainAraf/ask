@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ask</title>
+    <title><%= Rails.application.class.module_parent_name %>
+    </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +12,8 @@
   </head>
 
   <body>
+    <%= render "shared/navigation" %>    
     <%= yield %>
+    <% render "shared/footer" %>
   </body>
 </html>
